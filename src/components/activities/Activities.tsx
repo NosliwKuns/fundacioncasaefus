@@ -24,7 +24,7 @@ const Activities = () => {
           scrub: true,
           start: 'center center',
           end: `+=${slides.length * 100}px`, // Ajusta esto según tus necesidades
-          markers: true,
+          // markers: true,
           pin: true,
         },
       });

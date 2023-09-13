@@ -20,7 +20,7 @@ const HeroText = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
           scrub: true,
           start: "center center",
           end: "+=1000px",
-          markers: true,
+          // markers: true,
           // pin: paragraph.current,
         },
       });
@@ -55,8 +55,8 @@ const HeroText = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
       <div ref={box} className="w-[60vw] md:w-[52vw] lg:w-[45vw] xl:w-[640px] text-[4.5vw] md:text-[4vw] xl:text-[50px] bg-white/50 px-6 text-white overflow-hidden">
         <h3 ref={paragraph} className="whitespace-nowrap">No solo es parte del deber, sino de la felicidad</h3>
       </div>
-      <a href="#donar">
-        <button ref={button} className="absolute -bottom-[60px] md:-bottom-[40px] lg:bottom-0 bg-purple px-8 py-3 text-white text-2xl md:text-3xl lg:text-4xl rounded-2xl z-10">
+      <a ref={button} href="#donar" className="absolute -bottom-[60px] md:-bottom-[40px] lg:bottom-0 bg-purple px-8 py-3 text-white text-2xl md:text-3xl lg:text-4xl rounded-2xl z-10">
+        <button className="text-white" >
           Donar
         </button>
       </a>

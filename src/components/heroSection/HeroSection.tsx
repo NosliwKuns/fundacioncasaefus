@@ -26,7 +26,7 @@ const HeroSection = () => {
         scrub: true,
         start: "top top",
         end: "+=1500px",
-        markers: true,
+        // markers: true,
         pin: true,
       },
     })
@@ -46,7 +46,7 @@ const HeroSection = () => {
         scrub: true,
         start: "center center",
         end: "+=1000px",
-        markers: true,
+        // markers: true,
         pin: true,
       },
     });
@@ -60,7 +60,7 @@ const HeroSection = () => {
         scrub: true,
         start: "top top",
         end: "+=250px",
-        markers: true,
+        // markers: true,
       },
     })
     logoTl
@@ -123,8 +123,10 @@ const HeroSection = () => {
   return (
     <section className="relative w-full flex flex-col justify-center">
       <div className="h-[260px]" />
-      <div className="absolute h-[50vh] w-[44%] bg-white bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 -z-10" />
-      <TripleText className="left-[15vw] -translate-x-1/2 text-blue" >Ayudar</TripleText>
+      <div className="absolute h-[50vh] w-[44%] bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
+      <div className={`${visibility ?  "opacity-1" : "opacity-0"} transition-opacity duration-700 delay-[1.5s]`}>
+        <TripleText className={`left-[15vw] -translate-x-1/2 text-blue`} text-blue >Ayudar</TripleText>
+      </div>
       <div className="h-screen w-ful relative border-2 border-white" ref={background}>
         <Image
           className={`object-cover transition-opacity ${visibility ? "" : "opacity-0"} duration-[2s]`}
@@ -136,7 +138,9 @@ const HeroSection = () => {
         />
         {visibility && <div className="bg-black/40 absolute h-screen w-full z-10" />}
       </div>
-      <TripleText className="right-[15vw] translate-x-1/2 text-purple">Donar</TripleText>
+      <div className={`${visibility ?  "opacity-1" : "opacity-0"} transition-opacity duration-700 delay-1000`}>
+        <TripleText className="right-[15vw] translate-x-1/2 text-purple">Donar</TripleText>
+      </div>
       <div className="fixed h-[250px] top-0 w-screen z-[99] bg-transparent mix-blend-multiply" ref={logo}>
         <Image
           className="object-contain m-auto opacity-0 mix-blend-multiply"
