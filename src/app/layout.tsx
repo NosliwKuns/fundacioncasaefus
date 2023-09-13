@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Jomhuria } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Jomhuria({ 
+  subsets: ['latin'],
+  weight: '400' // Add the 'weight' property with an appropriate value
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >{children}</body>
     </html>
   )
 }
